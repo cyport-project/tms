@@ -13,7 +13,7 @@
 
 <p Align="right">
  <a href="/bulletinboard/register"><button type="submit" class="btn btn-info">新規投稿</button></a>&emsp;&emsp;
- <input id="sbox1" id="s" name="s" type="text" placeholder="キーワードを入力" />
+ <input id="sbox1" id="s" name="s" type="text" placeholder="ワードを入力" />
  <button type="submit" class="btn btn-info">検索</button></a>
 </p>
 
