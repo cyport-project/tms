@@ -20,6 +20,7 @@ class bulletinboardController extends Controller
 
 
 
+
     	return view('bulletinboard.register');
     }
 
