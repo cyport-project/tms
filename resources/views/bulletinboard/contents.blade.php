@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title> TMS </title>
-<link rel="stylesheet"
-<href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-</head>
 
-<body>
   @extends('layouts.base')
   @section('main')
 
 <p Align="right">
  <a href="/bulletinboard/register"><button type="submit" class="btn btn-info">新規投稿</button></a>&emsp;&emsp;
- <input id="sbox1" id="s" name="s" type="text" placeholder="ワードを入力" />
+ <input id="sbox1" id="s" name="s" type="text" placeholder="キーワードを入力" />
  <button type="submit" class="btn btn-info">検索</button></a>
 </p>
 
@@ -77,5 +68,3 @@
  
   @endsection
   
-</body>
-</html>

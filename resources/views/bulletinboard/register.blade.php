@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title> TMS </title>
-<link rel="stylesheet"
-<href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-</head>
 
-<body>
   @extends('layouts.base')
   @section('main')
 
@@ -27,7 +18,7 @@
 
 <br>
 
-<a href="/bulletinboard/">
+<a href="/bulletinboard">
  <button type="submit" class="btn btn-info">投稿</button>
 </a>
 
@@ -40,5 +31,3 @@
  
   @endsection
   
-</body>
-</html>
