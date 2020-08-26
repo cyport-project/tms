@@ -19,7 +19,7 @@
           <a href="{{ route('logout') }}">  ログアウト  </a>
       </div>
       <div style="padding:30px; width:100px">
-      	<a href="{{ url('/') }}"><img src="{{ asset('/assets/images/TMS2.jpg') }}" alt="ロゴ"></a>
+      	<a href="{{ url('/') }}"><img src="{{ asset('/assets/images/TMS.jpg') }}" alt="ロゴ"></a>
       </div>
   </div>
 </div>
@@ -56,8 +56,8 @@
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">経歴情報</a>
 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">経歴情報登録</a>
-            <a class="dropdown-item" href="#">経歴情報検索</a>
+            <a class="dropdown-item" href="exp/expreg">経歴情報登録</a>
+            <a class="dropdown-item" href="exp/expmeun">経歴情報検索</a>
           </div>
         </li>
 
