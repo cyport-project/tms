@@ -41,6 +41,7 @@ Route:: prefix('bulletinboard')-> group(function() {
   Route::get('', 'bulletinboardController@list');
   Route::get('register', 'bulletinboardController@register');
   Route::get('contents', 'bulletinboardController@contents');
+  Route::post('register', 'bulletinboardController@create');
 });
 
 
