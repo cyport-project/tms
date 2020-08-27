@@ -17,10 +17,11 @@
 </div></div>
 
 <br>
-
-<a href="/bulletinboard">
+@foreach($threads as $item)
+<a href="/bulletinboard/?name={{$item->name}}"">
  <button type="submit" class="btn btn-info">投稿</button>
 </a>
+@endforeach
 
 <br>
 <br>
