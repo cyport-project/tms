@@ -44,6 +44,7 @@ class bulletinboardController extends Controller
 	'thread_id' => $request->thread_id,
 	'name' => $request->name,
 	'message' => $request->message,
+	'delete_flag' =>$request->delete_flag,
 	'created_at' =>$request->now(),
 	];
 	
@@ -52,21 +53,5 @@ class bulletinboardController extends Controller
 		return redirect('bulletinboard');
 	}
 	
-    //
-    public function del(Request $request){
-    
-    $item =DB::table('thread')
-           ->where('thread_id', $reqest->thread_id)->first();
-    return view('bulletinboard.del',['form' =>$item]);)
-    }
-    
-    //
-    public function remove(Request $request){
-    
-     DB::table('thread')
-           ->where('thread_id', $reqest->thread_id)->delete();
-    return redirect('/bullentinboard');
-    }
-    
 }
     
