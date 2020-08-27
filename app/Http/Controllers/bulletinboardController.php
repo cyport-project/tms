@@ -17,7 +17,7 @@ class bulletinboardController extends Controller
     	return view('bulletinboard.list',$data);
     }
     //
-    public function register(){
+    public function register(Request $request){
   
     
  
@@ -51,7 +51,22 @@ class bulletinboardController extends Controller
 		
 		return redirect('bulletinboard');
 	}
-
+	
+    //
+    public function del(Request $request){
+    
+    $item =DB::table('thread')
+           ->where('thread_id', $reqest->thread_id)->first();
+    return view('bulletinboard.del',['form' =>$item]);)
+    }
+    
+    //
+    public function remove(Request $request){
+    
+     DB::table('thread')
+           ->where('thread_id', $reqest->thread_id)->delete();
+    return redirect('/bullentinboard');
+    }
     
 }
     
