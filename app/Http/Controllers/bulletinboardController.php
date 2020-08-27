@@ -38,9 +38,10 @@ class bulletinboardController extends Controller
     }
     
     //
-    public function create(Request $request) {
+    public function create(Request $request){
 	
 	$param = [
+	'thread_id' => $request->thread_id,
 	'name' => $request->name,
 	'message' => $request->message,
 	'created_at' =>$request->now(),
