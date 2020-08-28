@@ -23,7 +23,7 @@
 
 <p Align="right">名前&emsp;
  {{$item->created_at}}&emsp;
- <a href="/bulletinboard/delete/{{$item->thread_id}}" class="btn btn-secondary btn-sm">削除</a>&emsp;
+ <a href="/bulletinboard/contents/delete/?thread_id" class="btn btn-secondary btn-sm">削除</a>&emsp;
 </p>
 </font>
 
