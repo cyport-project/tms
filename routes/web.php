@@ -42,6 +42,7 @@ Route:: prefix('bulletinboard')-> group(function() {
   Route::get('register', 'bulletinboardController@register');
   Route::get('contents', 'bulletinboardController@contents');
   Route::post('register', 'bulletinboardController@create');
+  Route::get('delete/{thread_id}', 'bulletinboardController@delete');
 });
 
 
