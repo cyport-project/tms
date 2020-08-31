@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\bulletinboard;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\thread;
 use App\comment;
 use Illuminate\Support\Facades\DB;
 
-class bulletinboardController extends Controller
+class createController extends Controller
 {
     //ƒŒƒR[ƒh’Ç‰Á
     public function create(Request $request)

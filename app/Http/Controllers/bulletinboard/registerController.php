@@ -1,15 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\bulletinboard;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\thread;
 use App\comment;
 use Illuminate\Support\Facades\DB;
 
-class bulletinboardController extends Controller
+class registerController extends Controller
 {
-    //レジスター
+  //レジスター
     public function register(Request $request)
     {
         $data['threads']=  thread:: all() ;
