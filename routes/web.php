@@ -38,11 +38,11 @@ Route:: prefix('personalInformation')-> group(function() {
 
 //掲示板関連
 Route:: prefix('bulletinboard')-> group(function() {
-  Route::get('', 'bulletinboardController@list');
-  Route::get('register', 'bulletinboardController@register');
-  Route::get('contents', 'bulletinboardController@contents');
-  Route::post('register', 'bulletinboardController@create');
-  Route::get('delete/{thread_id}', 'bulletinboardController@delete');
+  Route::get('', 'bulletinboard\listController@list');
+  Route::get('register', 'bulletinboard\registerController@register');
+  Route::get('contents', 'bulletinboard\contentsController@contents');
+  Route::post('register', 'bulletinboard\createController@create');
+  Route::get('delete/{thread_id}', 'bulletinboard\deleteController@delete');
 });
 
 
