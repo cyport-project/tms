@@ -58,8 +58,8 @@
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">経歴情報</a>
 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="exp/expreg">経歴情報登録</a>
-            <a class="dropdown-item" href="exp/expmeun">経歴情報検索</a>
+            <a class="dropdown-item" href="expreg">経歴情報登録</a>
+            <a class="dropdown-item" href="expmeun">経歴情報検索</a>
           </div>
         </li>
 
