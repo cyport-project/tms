@@ -4,7 +4,10 @@
 
 <div class="col-sm-6">
 <div class="form-group">
+
+<form method="post" action="{{action('bulletinboardController@create')}}">
 @csrf
+
 <lavel for="title">■タイトル</label>
 <input type="text" class="form-control"  name="name" placeholder="(例)PHPについて">
 </div></div>
