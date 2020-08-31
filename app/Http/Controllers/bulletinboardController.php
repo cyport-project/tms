@@ -43,12 +43,12 @@ class bulletinboardController extends Controller
     //ƒŒƒR[ƒh’Ç‰Á
     public function create(Request $request)
     {
-        $param = [
-        'thread_id' => $request->thread_id,
-        'name' => $request->name,
-        'message' => $request->message,
-        'delete_flag' =>$request->delete_flag,
-        'created_at' =>$request->now(),];
+        $param = new thread();
+        \Log::info($request);
+        $param -> name = $request->name;
+        $param -> message = $request->message;
+        $param -> delete_flag = 0;
+        $param -> read_id = $request->created_at;
 
          DB::table('thread')->insert($param);
 
