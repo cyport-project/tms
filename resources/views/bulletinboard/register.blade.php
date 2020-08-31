@@ -1,12 +1,11 @@
 @extends('layouts.base')
 @section('main')
 
-<div class="col-sm-6">
-<div class="form-group">
-
 <form method="post" action="{{action('bulletinboard\createrController@create')}}">
 @csrf
 
+<div class="col-sm-6">
+<div class="form-group">
 <lavel for="title">■タイトル</label>
 <input type="text" class="form-control"  name="name" placeholder="(例)PHPについて">
 </div></div>
@@ -22,7 +21,7 @@
 <br>
 
 <button type="submit" class="btn btn-info">投稿</button>
-</a>
+
 
 </form>
 
