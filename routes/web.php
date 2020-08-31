@@ -45,8 +45,10 @@ Route:: prefix('bulletinboard')-> group(function() {
   Route::get('delete/{thread_id}', 'bulletinboardController@delete');
 });
 
-
-Route::get('expmeun','expController@meun' );
-Route::get('expedit','expController@edit' );
-Route::post('expedit','expController@post' );
-Route::get('expview','expController@view' );
+//スタッフ経験関連
+  Route::get('expmeun','expController@meun' );
+  Route::get('expedit','expController@edit' );
+  Route::post('expedit','expController@post' );
+  Route::get('expview','expController@view' );
+  Route::get('expreg','expController@reg' );
+  Route::post('expreg','expController@regpost' );
