@@ -14,7 +14,7 @@ class CreateThreadTable extends Migration
     public function up()
     {
         Schema::create('thread', function (Blueprint $table) {
-            $table->id('thread_id');
+            $table->increments('thread_id');
             $table->string('name',100);
             $table->string('message',1000);
             $table->integer('delete_flag');
