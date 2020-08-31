@@ -1,11 +1,10 @@
-
-  @extends('layouts.base')
-  @section('main')
+@extends('layouts.base')
+@section('main')
 
 <div class="col-sm-6">
 <div class="form-group">
 
-<form method="post" action="{{action('bulletinboardController@create')}}">
+<form method="post" action="{{action('bulletinboard\createrController@create')}}">
 @csrf
 
 <lavel for="title">■タイトル</label>
@@ -25,6 +24,7 @@
 <button type="submit" class="btn btn-info">投稿</button>
 </a>
 
+</form>
 
 <br>
 <br>
