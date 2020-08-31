@@ -64,7 +64,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="/bulletinboard/">掲示板</a>
+          <a class="nav-link active" href="/bulletinboard/list">掲示板</a>
         </li>
       </ul>
         <!-- 社員IDの表示 -->
