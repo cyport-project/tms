@@ -17,6 +17,6 @@ class deleteController extends Controller
              'delete_flag'=>'1'
            ]);
 
-      return redirect('home');
+      return redirect('personalInformation/list');
     }
 }

@@ -50,6 +50,6 @@ class updateController extends Controller
               'delete_flag'=>'0'
             ]);
 
-     return redirect('home');
+     return redirect('personalInformation/list');
    }
 }

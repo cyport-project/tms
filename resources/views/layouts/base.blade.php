@@ -47,7 +47,9 @@
             <a class="dropdown-item" href="/personalInformation/register">個人情報登録</a>
             <a class="dropdown-item" href="/personalInformation/certification">資格情報登録</a>
             <a class="dropdown-item" href="/personalInformation/list">個人情報一覧</a>
+            @if(Auth::user()->mode == 2 || Auth::user()->mode==9)
             <a class="dropdown-item" href="/personalInformation/print">宛名印刷</a>
+            @endif
           </div>
         </li>
 
