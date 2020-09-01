@@ -38,7 +38,7 @@ Route:: prefix('personalInformation')-> group(function() {
 
 //掲示板関連
 Route:: prefix('bulletinboard')-> group(function() {
-  Route::get('', 'bulletinboard\listController@list');
+  Route::get('list', 'bulletinboard\listController@list');
   Route::get('register', 'bulletinboard\registerController@register');
   Route::get('contents', 'bulletinboard\contentsController@contents');
   Route::post('create', 'bulletinboard\createController@create');

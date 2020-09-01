@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class listController extends Controller
 {
-    //���X�g
+    //スレッド一覧表表示
     public function list()
     {
         $data['threads']=  thread:: all() ;
@@ -21,4 +21,3 @@ class listController extends Controller
     }
 
 }
-    

@@ -11,20 +11,20 @@ use Illuminate\Support\Facades\DB;
 
 class createController extends Controller
 {
-    //ƒŒƒR[ƒh’Ç‰Á
+    //ç™»éŒ²å‡¦ç†
     public function create(Request $request)
     {
-        \Log::info('“Še‰æ–ÊStart');
-        $param = new thread();
-        \Log::info($request);
-        $param -> name = $request->name;
-        $param -> message = $request->message;
-        $param -> delete_flag = 0;
-      
-         DB::table('thread')->insert($param);
 
-        return redirect('bulletinboard');
+        $param = new thread();
+
+        $param->s_id = $request->name;
+        $param->title = $request->title;
+        $param->message = $request->message;
+        $param->delete_flag = '0';
+
+        $param->save();
+
+        return redirect('bulletinboard\list');
     }
 
 }
-    

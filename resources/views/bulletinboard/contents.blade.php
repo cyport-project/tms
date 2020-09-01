@@ -1,6 +1,5 @@
-
-  @extends('layouts.base')
-  @section('main')
+@extends('layouts.base')
+@section('main')
 
 <p Align="right">
  <a href="/bulletinboard/register"><button type="submit" class="btn btn-info">新規投稿</button></a>&emsp;&emsp;
@@ -9,47 +8,28 @@
 </p>
 
 @foreach($threads as $item)
-
-<div class="col-sm-12">
-<div class="card border-info">
-
- <font size="4">
-
- <li>{{$item->thread_id}}&emsp;
-
-<b>{{$item->name}}</b><br>
-
-{{$item->message}}<br><br>
-
-<p Align="right">名前&emsp;
- {{$item->created_at}}&emsp;
- <a href="/bulletinboard/contents/delete/?thread_id" class="btn btn-secondary btn-sm">削除</a>&emsp;
-</p>
-</font>
-
-@break
+  <div class="col-sm-12">
+    <div class="card border-info">
+      <li>{{$item->thread_id}} {{$item->title}}</li>
+       <div>{{$item->message}} </div>
+          <p Align="right">{{$item->s_id}}{{$item->created_at}}
+            <a href="/bulletinboard/contents/delete/?thread_id" class="btn btn-secondary btn-sm">削除</a>
+          </p>
+    </div>
+  </div>
+  @foreach($comments as $item)
+    <div class="col-sm-12">
+      <div class="card border-info">
+          {{$item->comment_id}}
+          {{$item->body}}
+          <p Align="right">名前{{$item->created_at}}
+            <a href="/bulletinboard/delete/{{$item->comment_id}}" class="btn btn-secondary btn-sm">削除</a>&emsp;
+          </p>
+      </div>
+    </div>
+  @endforeach
 @endforeach
 
-</div></div>
-
-<br><br>
-
-@foreach($comments as $item)
-
-<div class="col-sm-12">
-<div class="card border-info">
-
- <font size="4">
-{{$item->comment_id}}&emsp;
-{{$item->body}}
-
-<p Align="right">名前&emsp;
-{{$item->created_at}}&emsp;
- <a href="/bulletinboard/delete/{{$item->comment_id}}" class="btn btn-secondary btn-sm">削除</a>&emsp;
-</p>
- </font>
-</div></div>
-@endforeach
 
 <br><br>
 
@@ -65,6 +45,5 @@
 <p Align="right">
  <a href="/bulletinboard/"><button type="submit" class="btn btn-info">戻る</button></a>
 </p>
- 
+
   @endsection
-  

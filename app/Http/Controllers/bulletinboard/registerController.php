@@ -11,14 +11,10 @@ use Illuminate\Support\Facades\DB;
 
 class registerController extends Controller
 {
-  //レジスター
-    public function register(Request $request)
+  //逋ｻ骭ｲ蜃ｦ逅�
+    public function register()
     {
-        $data['threads']=  thread:: all() ;
-        $data['comments']= comment:: all() ;
-
         return view('bulletinboard.register');
     }
 
 }
-    
