@@ -1,6 +1,5 @@
 @extends('layouts.base')
-@section('title','資格
-情報登録')
+@section('title','資格情報登録')
 @section('main')
 @if (count($errors) > 0)
   <ul>

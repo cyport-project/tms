@@ -1,4 +1,5 @@
 @extends('layouts.base')
+@section('title','スレッド内容画面')
 @section('main')
 
 <p Align="right">
@@ -39,11 +40,11 @@
 </div></div>
 
 <br>
-<a href="/bulletinboard/contents"><button type="submit" class="btn btn-info">返信</button></a>
+<a href="/bulletinboard/contents"><button type="submit" class="btn btn-info">送信</button></a>
 
 
 <p Align="right">
- <a href="/bulletinboard/"><button type="submit" class="btn btn-info">戻る</button></a>
+ <button type="submit" class="btn btn-info" onclick=history.back() >戻る</button></a>
 </p>
-
-  @endsection
+<script
+@endsection

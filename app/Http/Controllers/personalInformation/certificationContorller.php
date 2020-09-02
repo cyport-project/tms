@@ -12,6 +12,10 @@ use Validator;
 
 class certificationContorller extends Controller
 {
+  public function __construct()
+  {
+        $this->middleware('auth');
+  }
     //入力フォームの作成
     public function create(){
         //定数データの取得

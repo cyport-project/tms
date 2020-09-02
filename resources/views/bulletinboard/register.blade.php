@@ -21,7 +21,7 @@
 <br>
 
 <p Align="right">
- <a href="/bulletinboard/"><button type="submit" class="btn btn-info">戻る</button></a>
+ <button type="submit" class="btn btn-info" onclick=history.back() >戻る</button></a>
 </p>
 
   @endsection

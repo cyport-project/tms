@@ -160,7 +160,7 @@
     <div class="form-group row">
       <label for="submit_h" class="col-md-4 col-form-label text-md-right"></label>
       <div class="col-md-6">
-        <button type="submit" class="btn btn-info">送信</button>
+        <button type="submit" class="btn btn-info"　onclick=history.back() >送信</button>
       </div>
     </div>
   </form>

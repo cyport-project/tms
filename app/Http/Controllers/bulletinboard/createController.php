@@ -11,20 +11,21 @@ use Illuminate\Support\Facades\DB;
 
 class createController extends Controller
 {
-    //登録処理
-    public function create(Request $request)
-    {
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+  //登録処理
+  public function create(Request $request)
+  {
+    $param = new thread();
 
-        $param = new thread();
+    $param->s_id = $request->name;
+    $param->title = $request->title;
+    $param->message = $request->message;
+    $param->delete_flag = '0';
+    $param->save();
 
-        $param->s_id = $request->name;
-        $param->title = $request->title;
-        $param->message = $request->message;
-        $param->delete_flag = '0';
-
-        $param->save();
-
-        return redirect('bulletinboard\list');
-    }
-
+    return redirect('bulletinboard\list');
+  }
 }

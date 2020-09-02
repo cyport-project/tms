@@ -1,10 +1,11 @@
 @extends('layouts.base')
+@section('title','掲示板画面')
 @section('main')
 
 <p Align="right">
  <a href="/bulletinboard/register"><button type="submit" class="btn btn-info">新規投稿</button></a>
- <input id="sbox1" id="s" name="s" type="text" placeholder="キーワードを入力" />
- <button type="submit" class="btn btn-info">検索</button></a>
+ <input id="word" type="text" placeholder="キーワードを入力" />
+ <button class="btn btn-info"  >検索</button>
 </p>
 
 @foreach($threads as $item)

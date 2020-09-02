@@ -11,13 +11,16 @@ use Illuminate\Support\Facades\DB;
 
 class listController extends Controller
 {
-    //スレッド一覧表表示
-    public function list()
-    {
-        $data['threads']=  thread:: all() ;
-        $data['comments']= comment:: all() ;
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+  //スレッド一覧表表示
+  public function list()
+  {
+    $data['threads']=  thread:: all() ;
+    $data['comments']= comment:: all() ;
 
-        return view('bulletinboard.list',$data);
-    }
-
+    return view('bulletinboard.list',$data);
+  }
 }
