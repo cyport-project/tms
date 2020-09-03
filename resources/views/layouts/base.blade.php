@@ -11,16 +11,20 @@
 <body>
 <br/>
   <div class="container">
-    <div style="background-color:#add8e6;"><div class="jumbotron-fluid"></div>
-      <div style="padding:10px; height:10px" Align="right">
-        @if(Auth::check())
+    <div class="row">
+      <div class="col">
+          <div style="padding:30px; width:100px">
+            <a href="{{ url('/') }}"><img src="{{ asset('/assets/images/TMSskel.png') }}" alt="ロゴ"></a>
+          </div>
+      </div>
+
+      @if(Auth::check())
+        <div style="padding:10px; height:10px" Align="right">
           <a > ログイン:{{Auth::user()->s_id}}</a>
-        @endif
           <a href="{{ route('logout') }}">  ログアウト  </a>
-      </div>
-      <div style="padding:30px; width:100px">
-      	<a href="{{ url('/') }}"><img src="{{ asset('/assets/images/TMS.jpg') }}" alt="ロゴ"></a>
-      </div>
+        </div>
+      @endif
+    </div>
   </div>
 </div>
 <br/>
