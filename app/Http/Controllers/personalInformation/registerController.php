@@ -63,6 +63,6 @@ class registerController extends Controller
       $b->delete_flag= '0';
       $b->save();
 
-      return redirect('/');
+      return redirect('home');
     }
 }

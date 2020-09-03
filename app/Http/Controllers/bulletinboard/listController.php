@@ -18,7 +18,8 @@ class listController extends Controller
   //スレッド一覧表表示
   public function list()
   {
-    $data['threads']=  orderBy('recruitment_end_date', 'desc')->get(); ;
+    $data['threads']=  thread::select('*') ->
+        orderBy('created_at', 'desc')->get(); ;
     $data['comments']= comment:: all() ;
 
     return view('bulletinboard.list',$data);

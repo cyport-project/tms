@@ -2,7 +2,7 @@
 @section('title','個人情報一覧')
 @section('main')
   <div class="form-group row">
-    <table class="table table-bordered">
+    <table class="table table-sm table-bordered">
       <tr>
         <th scope="col"> 社員ID </th>
         <th> 氏名 </th>
@@ -27,5 +27,7 @@
       </tr>
       @endforeach
     </table>
+    <!-- page control -->
+    {!! $records->render() !!}
   </div>
 @endsection

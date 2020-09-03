@@ -13,7 +13,7 @@
 @csrf
     <div class="form-group row">
       <label for="s_id_h" class="col-md-4 col-form-label text-md-right">社員ID</label>
-        @if ($users->mode === '1')
+        @if ($users->mode != '9')
           <div class="col-md-6">
             <input id ="s_id" name ="s_id" type ="text" value ="{{old('s_id',$users->s_id)}}" readonly />
           </div>
