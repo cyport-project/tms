@@ -1,6 +1,7 @@
   @extends('layouts.base')
   @section('title','ホーム')
   @section('main')
+  @csrf
     <div class="form-group row">
     <table class="table table-striped">
       <thead>
