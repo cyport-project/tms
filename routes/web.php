@@ -47,4 +47,6 @@ Route:: prefix('bulletinboard')-> group(function() {
 
 Route:: prefix('exp')-> group(function() {
   Route::get('list','exp\listController@list' );
+  Route::get('create','exp\registerController@create' );
+  Route::get('register','exp\registerController@register' );
 });
