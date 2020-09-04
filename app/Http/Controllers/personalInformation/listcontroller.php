@@ -8,7 +8,7 @@ use App\staff;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
-class listcontroller extends Controller
+class listController extends Controller
 {
   public function __construct()
   {

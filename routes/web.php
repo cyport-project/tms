@@ -45,10 +45,6 @@ Route:: prefix('bulletinboard')-> group(function() {
   Route::get('delete/{thread_id}', 'bulletinboard\deleteController@delete');
 });
 
-
-  Route::get('expmeun','expController@meun' );
-  Route::get('expedit','expController@edit' );
-  Route::post('expedit','expController@post' );
-  Route::get('expview','expController@view' );
-  Route::get('expreg','expController@reg' );
-  Route::post('expreg','expController@regpost' );
+Route:: prefix('exp')-> group(function() {
+  Route::get('list','exp\listController@list' );
+});
