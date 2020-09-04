@@ -16,7 +16,7 @@ Auth::routes();
 
 Route::get('home', 'dashboard\dashboardController@list');
 Route::get('/', function () {
-    return view('Auth\login');
+    return view('auth/login');
 });
 Route::get('logout','Auth\LoginController@logout');
 
@@ -38,15 +38,15 @@ Route:: prefix('personalInformation')-> group(function() {
 
 //掲示板関連
 Route:: prefix('bulletinboard')-> group(function() {
-  Route::get('list', 'bulletinboard\listController@list');
-  Route::get('register', 'bulletinboard\registerController@register');
-  Route::get('contents', 'bulletinboard\contentsController@contents');
-  Route::post('create', 'bulletinboard\createController@create');
-  Route::get('delete/{thread_id}', 'bulletinboard\deleteController@delete');
+  Route::get('', 'bulletinboardController@list');
+  Route::get('register', 'bulletinboardController@register');
+  Route::get('contents', 'bulletinboardController@contents');
+  Route::post('register', 'bulletinboardController@create');
+  Route::get('delete/{thread_id}', 'bulletinboardController@delete');
 });
 
-
-  Route::get('expmeun','expController@meun' );
+//スタッフ経験関連
+  Route::get('exp/expmeun','expController@meun' );
   Route::get('expedit','expController@edit' );
   Route::post('expedit','expController@post' );
   Route::get('expview','expController@view' );

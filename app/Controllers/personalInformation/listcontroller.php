@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\staff;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Input;
+
 
 class listcontroller extends Controller
 {
@@ -18,10 +18,11 @@ class listcontroller extends Controller
     public function list() {
 
       if(Auth::user()->mode == 1){
-         $data = ['records' => staff::where('s_id', Auth::user()->s_id) -> where('delete_flag', 0) -> paginate(5)];
+         $data = ['records' => staff::where('s_id', Auth::user()->s_id)-> get()];
       }else{
-         $data = ['records' => staff:: where('delete_flag',0) -> paginate(5)];
+         $data = ['records' => staff:: all() ];
       }
+
 
       return view('personalInformation.list', $data);
     }

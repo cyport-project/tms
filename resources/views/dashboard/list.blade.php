@@ -1,9 +1,10 @@
   @extends('layouts.base')
   @section('title','ホーム')
   @section('main')
-  @csrf
+
     <div class="form-group row">
-    <table class="table table-striped">
+    @csrf
+    <table class="table table-striped table-sm">
       <thead>
       <tr>
         <th id="publication_date_h" size="100" > 掲載日 </th>
