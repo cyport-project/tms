@@ -127,6 +127,15 @@ return [
       'employment_category'=>'就業区分',
       'certification_id'=>'資格',
       'certification_date'=>'資格取得日',
+      'pro id'=>'プロジェクトID',
+      'start_period'=>'開始年月日',
+      'industry'=>'業種',
+      'pro_name'=>'プロジェクト名',
+      'pro_content'=>'プロジェクト概要',
+      'content'=>'業務内容',
+      'mod_os'=>'機種・OS',
+      'db_dc'=>'使用データベース',
+      'lang_tool'=>'言語・ツール',
     ],
 
 ];

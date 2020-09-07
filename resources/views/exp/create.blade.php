@@ -12,11 +12,13 @@
 <!-- フォーム -->
 <form method="post" action="{{action('exp\registerController@register')}}">
 @csrf
+
 <!-- 1行目 -->
  <div class="form-group row">
  	<label for="name" class="col-md-4 col-form-label text-md-right" >氏名</label>
  	  <div class="col-md-6">
- 	    <input type="text" name="name" value="{{old('s_id')}}" />
+ 	    <input type="text" name="name" value="{{$name->lname.$name->fname}}" readonly >
+      <input type="hidden" value="{{old('s_id',$name->s_id)}}" >
  	  </div>
   </div>
 
@@ -24,7 +26,7 @@
   <div class="form-group row">
     <label for="start_period" class="col-md-4 col-form-label text-md-right">プロジェクト開始</label>
     <div class="col-md-6">
-      <input type="date" name="start_period">
+      <input type="date" name="start_period" value="old('start_period')">
     </div>
   </div>
 
@@ -32,7 +34,7 @@
   <div class="form-group row">
     <label for="end_period" class="col-md-4 col-form-label text-md-right">プロジェクト終了</label>
     <div class="col-md-6">
-      <input type="date" name="end_period">
+      <input type="date" name="end_period" value="old('end_period')">
     </div>
   </div>
 
@@ -72,7 +74,7 @@
   <div class="form-group row">
   	 	<label for="mod_os" class="col-md-4 col-form-label text-md-right">機種・OS</label>
  	    <div class="col-md-6">
- 	       <input type="text" name="mod_os">
+ 	       <input type="text" name="mod_os" value="{{old('mod_os')}}">
  	     </div>
   </div>
 
@@ -80,7 +82,7 @@
     <div class="form-group row">
    	 	<label for="DB_DC" class="col-md-4 col-form-label text-md-right">使用データベース</label>
  	    <div class="col-md-6">
- 	      <input type="text" name="DB_DC" value="{{old('DB_DC')}}">
+ 	      <input type="text" name="db_dc" value="{{old('db_dc')}}">
  	    </div>
     </div>
 
@@ -94,10 +96,24 @@
 
 <!-- 10行目 -->
     <div class="form-group row">
+        <label for="lang_tool" class="col-md-4 col-form-label text-md-right">工程</label>
+        <div class="col-md-7">
+			       <input type="checkbox" name="rd_p" id="rd_p"　value="1">要件定義　
+             <input type="checkbox" name="bd_p" id="bd_p"　value="1">基本設計　
+             <input type="checkbox" name="dd_p" id="dd_p"　value="1">詳細設計　
+             <input type="checkbox" name="pg_p" id="pg_p"　value="1">開発・テスト　
+             <input type="checkbox" name="el_p" id="el_p"　value="1">評価　
+             <input type="checkbox" name="ml_p" id="ml_p"　value="1">保守　
+             <input type="checkbox" name="op_p" id="op_p"　value="1">運用　
+         </div>
+    </div>
+
+<!-- 11行目 -->
+    <div class="form-group row">
         <label for="lang_tool" class="col-md-4"></label>
-        <div class="col-md-6">
+        <div class="col-md-8　text-md-left">
 			       <input type="submit" class="btn-info" value="確定">
         </div>
     </div>
-	</form>
-  @endsection
+</form>
+@endsection

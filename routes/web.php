@@ -48,5 +48,7 @@ Route:: prefix('bulletinboard')-> group(function() {
 Route:: prefix('exp')-> group(function() {
   Route::get('list','exp\listController@list' );
   Route::get('create','exp\registerController@create' );
-  Route::get('register','exp\registerController@register' );
+  Route::get('update/{id}/edit','exp\updateController@update' );
+  Route::get('update','exp\updateController@register' );
+  Route::post('register','exp\registerController@register' );
 });

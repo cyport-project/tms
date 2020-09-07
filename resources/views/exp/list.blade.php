@@ -12,11 +12,14 @@
   </style>
   <div class="container" style="padding:10px;">
     <row>
+      <div class="col-sm-4" align="left">社員ID：{{$name->s_id}}</div>
+      <div class="col-sm-6" align="left">氏名：{{$name->lname . $name->fname}}</div>
       <div class="col-sm-12" align="right">
-        <a href="/exp/create" class="btn-sm btn-info">追加</a>
+        <a href="/exp/create/" class="btn-sm btn-info">追加</a>
       </div>
     </row>
   </div>
+
   <div class="container">
     <row>
     <table class="table table-sm table-bordered">
@@ -52,7 +55,7 @@
         <td> @if("{{$record->el_p}}" == 1) 〇 @endif</td>
         <td> @if("{{$record->mt_p}}" == 1) 〇 @endif</td>
         <td> @if("{{$record->op_p}}" == 1) 〇 @endif</td>
-        <td><a href="/ex/update/{{$record->s_id}}/edit" class="btn btn-info btn-sm">編集</a></td>
+        <td><a href="/exp/update/{{$record->id}}" class="btn btn-info btn-sm">編集</a></td>
       </tr>
       @endforeach
     </table>
