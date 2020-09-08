@@ -10,7 +10,7 @@
       </ul>
 @endif
 <!-- フォーム -->
-<form method="post" action="{{action('exp\registerController@register')}}">
+<form method="post" action="{{action('exp\registerController@store')}}">
 @csrf
 
 <!-- 1行目 -->

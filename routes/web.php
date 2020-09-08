@@ -31,9 +31,6 @@ Route:: prefix('personalInformation')-> group(function() {
   Route::get('delete/{s_id}', 'personalInformation\deleteController@delete');
   Route::get('print', 'personalInformation\pdfController@list');
   Route::post('pdf.print', 'personalInformation\pdfController@print');
-  Route::get('certification', 'personalInformation\certificationContorller@create');
-  Route::post('certification.store', 'personalInformation\certificationContorller@store');
-
 });
 
 //掲示板関連
@@ -45,10 +42,18 @@ Route:: prefix('bulletinboard')-> group(function() {
   Route::get('delete/{thread_id}', 'bulletinboard\deleteController@delete');
 });
 
+//資格情報管理
+Route:: prefix('certification')-> group(function() {
+  Route::get('list', 'certification\listController@list');
+  Route::get('create', 'certification\registerController@create');
+  Route::post('register','certification\registerController@store');
+});
+
+//経験管理
 Route:: prefix('exp')-> group(function() {
   Route::get('list','exp\listController@list' );
   Route::get('create','exp\registerController@create' );
   Route::get('update/{id}/edit','exp\updateController@update' );
-  Route::get('update','exp\updateController@register' );
+  Route::patch('update','exp\updateController@register' );
   Route::post('register','exp\registerController@register' );
 });

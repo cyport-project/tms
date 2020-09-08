@@ -13,8 +13,13 @@ class registerController extends Controller
     //入力画面表示
     public function create(){
       $data['name']=staff::where('s_id', Auth::user()->s_id) -> first();
+      if(isset($data['name'])){
+            return view("exp.create",$data);
+      }else{
+            return redirect('home');
+      }
 
-      return view("exp.create",$data);
+
     }
     //データベース登録
     public function register(Request $req){
