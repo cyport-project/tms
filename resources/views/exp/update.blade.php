@@ -1,6 +1,8 @@
 @extends('layouts.base')
 @section('tilte','スタッフ経歴変更')
 @section('main')
+@csrf
+
 <!-- エラー時の表示 -->
 @if (count($errors) > 0)
       <ul>
@@ -9,6 +11,7 @@
       @endforeach
       </ul>
 @endif
+
 <!-- フォーム -->
 <form method="post" action="{{action('exp\updateController@register')}}">
 @csrf
@@ -105,7 +108,8 @@
     <div class="form-group row">
         <label for="lang_tool" class="col-md-4"></label>
         <div class="col-md-8　text-md-left">
-			       <input type="submit" class="btn-info" value="変更">
+            <input type="button" class="btn btn-info" onclick="history.back()" value="戻る">
+			      <input type="submit" class="btn btn-info" value="変更">
         </div>
     </div>
 </form>

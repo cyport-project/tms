@@ -1,6 +1,7 @@
 @extends('layouts.base')
 @section('title','個人経歴情報')
 @section('main')
+@csrf
 <div class="form-group row">
 
   <div class="container" style="padding:10px;">
@@ -25,7 +26,7 @@
       <tr>
         <td> {{$record->certification_date}}</td>
         <td> {{$record->value2}}</span> </td>
-        <td width="60px" ><a href="/exp/update/edit" class="btn btn-info btn-sm">編集</a></td>
+        <td width="60px" ><a href="/certification/update/{{$record->id}}/edit" class="btn btn-info btn-sm">編集</a></td>
       </tr>
       @endforeach
     </table>

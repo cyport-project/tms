@@ -51,35 +51,12 @@
   <div class="form-group row">
         <label for="notice" class="col-md-4 col-form-label text-md-right"></label>
         <div class="col-md-6　align-self-center">　
-          <button type="button" onclick="history.back()">戻る</button>
-          <button type ="submit"　> 登録</button>
+          <input type="button" class="btn btn-info" onclick="history.back()" value="戻る">
+          <input type ="submit" class="btn btn-info" value="登録">
         </div>
     </div>
   </div>
 </form>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script id="certification-js">
-  // src="{{ asset('/js/certification.js') }}">
-var $children = $('.children');
-var original = $children.html();
-
-$(document).on('change','.parent',function() {
-  var val1 = $(this).val();
-
-  $children.html(original).find('option').each(function() {
-    var val2 = $(this).data('val');
-
-    if (val1 != val2) {
-      $(this).not(":first-child").remove();
-    }
-  });
-
-  if ($(this).val() == "") {
-    $children.attr('disabled', 'disabled');
-  } else {
-    $children.removeAttr("disabled");
-  }
-
-});
-</script>
+<script src="/js/certification.js"></script>
 @endsection

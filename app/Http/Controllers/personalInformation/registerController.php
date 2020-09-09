@@ -59,7 +59,6 @@ class registerController extends Controller
       $b = new staff();
 
       $b=$req->session()->get('staff');
-      $b->s_id=Auth::user()->s_id;
       $b->delete_flag= '0';
       $b->save();
 

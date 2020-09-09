@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
 
 class updateController extends Controller
 {
+  //認証チェック
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+
   //編集画面表示
   public function update($id){
     $data['record']=staff_experience::where('id', $id) -> first();

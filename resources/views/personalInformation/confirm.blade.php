@@ -59,8 +59,8 @@
       <br/>
       <label for="employment_category_h" class="col-md-4 col-form-label text-md-right"></label>
         <div class="col-md-6 text-md-left">
-            <button type="button" class="btn btn-info" onclick="history.back()">戻る</button>
-            <button type ="submit" class="btn btn-info"> 登録</button>
+            <input type="button" class="btn btn-info" onclick="history.back()" value="戻る">
+            <input type ="submit" class="btn btn-info" value="登録"> 
         </div>
 
     </div>

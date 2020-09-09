@@ -47,6 +47,8 @@ Route:: prefix('certification')-> group(function() {
   Route::get('list', 'certification\listController@list');
   Route::get('create', 'certification\registerController@create');
   Route::post('register','certification\registerController@store');
+  Route::get('update/{id}/edit','certification\updateController@update');
+  Route::patch('update','certification\updateController@register');
 });
 
 //経験管理

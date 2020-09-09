@@ -1,12 +1,12 @@
 @extends('layouts.base')
 @section('title','個人経歴情報')
 @section('main')
+@csrf
 <div class="form-group row">
-
   <div class="container" style="padding:10px;">
     <row>
-      <div class="col-sm-4" align="left">社員ID：@if(isset($name)) $name->s_id @endif </div>
-      <div class="col-sm-6" align="left">氏名：@if(isset($name)) $name->lname . $name->fname @endif</div>
+      <div class="col-sm-4" align="left">社員ID：@if(isset($name)) {{$name->s_id}} @endif </div>
+      <div class="col-sm-6" align="left">氏名：@if(isset($name)) {{$name->lname . $name->fname}} @endif</div>
       <div class="col-sm-12" align="right">
         <a href="/exp/create/" class="btn-sm btn-info">追加</a>
       </div>

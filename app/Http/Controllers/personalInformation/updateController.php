@@ -10,7 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class updateController extends Controller
 {
-  //
+  //認証チェック
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+  //変更画面の表示
   public function edit($s_id) {
     \Log::info($s_id);
     $data["b"]=staff::where('s_id', $s_id)-> first();
