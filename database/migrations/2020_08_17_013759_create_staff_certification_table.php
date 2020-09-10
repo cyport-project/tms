@@ -14,6 +14,7 @@ class CreateStaffCertificationTable extends Migration
     public function up()
     {
         Schema::create('staff_certification', function (Blueprint $table) {
+            $table->id();
             $table->string('s_id',14);
             $table->string('certification_id',5);
             $table->date('certification_date');

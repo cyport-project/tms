@@ -1,0 +1,22 @@
+.vertical {
+  display: flex;
+  writing-mode: vertical-lr;
+  align-items: center;
+  width: 8px;
+}
+
+.context{
+  windth:400px;
+}
+
+  table{
+    font-size:12px;
+  }
+   th{
+      text-align: center;
+      text-valign:center;
+   }
+   td.btn{
+     text-align: center;
+     text-valign:center;
+   }
