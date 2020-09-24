@@ -64,28 +64,28 @@
     <div class="form-group row">
       <label for="tell_num_h" class="col-md-4 col-form-label text-md-right">携帯電話番号</label>
         <div class="col-md-6">
-            <input id ="tell_num" name ="tell_num" type ="text" size ="12" value ="{{ old('tell_num') }}" />
+            <input id ="tell_num" name ="tell_num" type ="tel" size ="12" value ="{{ old('tell_num') }}" />
         </div>
     </div>
 
     <div class="form-group row">
       <label for="emergency_contact_h" class="col-md-4 col-form-label text-md-right">緊急連絡先</label>
         <div class="col-md-6">
-            <input id ="emergency_contact" name ="emergency_contact" type ="text" size ="12" value ="{{ old('emergency_contact') }}" />
+            <input id ="emergency_contact" name ="emergency_contact" type ="tel" size ="12" value ="{{ old('emergency_contact') }}" />
         </div>
     </div>
 
     <div class="form-group row">
       <label for="phone_h" class="col-md-4 col-form-label text-md-right">自宅電話番号</label>
         <div class="col-md-6">
-          <input id ="phone" name ="phone" type ="text" size ="12" value ="{{ old('phone') }}" />
+          <input id ="phone" name ="phone" type ="tel" size ="12" value ="{{ old('phone') }}" />
         </div>
     </div>
 
     <div class="form-group row">
       <label for="mail_ad_h" class="col-md-4 col-form-label text-md-right">メールアドレス</label>
       <div class="col-md-6">
-        <input id ="mail_ad" name ="mail_ad" type ="text" size ="30" value ="{{ old('mail_ad') }}" />
+        <input id ="mail_ad" name ="mail_ad" type ="email" size ="30" value ="{{ old('mail_ad') }}" />
       </div>
     </div>
 

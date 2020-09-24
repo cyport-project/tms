@@ -27,8 +27,17 @@ class registerController extends Controller
         $data["categories"]=certification_mst::distinct()->select('key1','value1')->get();
         $data["certifications"]=certification_mst::all();
         $data["users"]=Auth::user();
+        $data['name']=staff::where('s_id', Auth::user()->s_id) -> first();
 
-        return view('certification.create',$data);
+        if(isset($data['name'])){
+              return view('certification.create',$data);
+        }else{
+              return redirect('home')
+              ->withErrors("個人情報が未登録です。\n　先に登録を済ませてください。")
+              ->withInput();
+        }
+
+
     }
 
     //データベースへの登録

@@ -51,10 +51,11 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #e3f2fd;">
             <a class="dropdown-item" href="/personalInformation/register">個人情報登録</a>
             <a class="dropdown-item" href="/certification/list">資格情報表示</a>
-            <a class="dropdown-item" href="/exp/list">経歴表示</a>
-            <a class="dropdown-item" href="/personalInformation/list">個人情報一覧</a>
+            <a class="dropdown-item" href="/exp/list">経歴情報表示</a>
+
             @if(Auth::user()->mode == 2 || Auth::user()->mode==9)
-            <a class="dropdown-item" href="/personalInformation/print">宛名印刷</a>
+              <a class="dropdown-item" href="/personalInformation/list">個人情報一覧</a>
+              <a class="dropdown-item" href="/personalInformation/print">宛名印刷</a>
             @endif
           </div>
         </li>

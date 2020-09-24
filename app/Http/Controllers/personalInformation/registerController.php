@@ -16,14 +16,18 @@ class registerController extends Controller
   }
     // 入力 フォーム の 生成
     public function create() {
-      \Log::info('入力画面Start');
       //定数データの取得
       $data["educationals"]=constant_mst::where('constant_id', '01002')-> get();
       $data["departments"]=constant_mst::where('constant_id', '01001')-> get();
       $data["employment_categorys"]=constant_mst::where('constant_id', '01003')-> get();
       $data["users"]=Auth::user();
-      \Log::info('入力画面End');
-      return view('personalInformation.register',$data);
+      $data["b"]=staff::where('s_id', Auth::user()->s_id)-> first();
+
+      if(isset($data["b"])){
+          return view('personalInformation.update', $data);
+      }else{
+          return view('personalInformation.register',$data);
+      }
     }
 
     //確認画面を表示

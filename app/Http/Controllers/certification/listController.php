@@ -20,7 +20,6 @@ class listController extends Controller
                         ->select('staff_certification.*', 'certification_mst.value2')
                         ->where('s_id',Auth::user()->s_id)
                         ->paginate(10);
-    \Log::info($data);
     //ビューの呼びだし
     return view('certification.list',$data);
   }

@@ -16,7 +16,9 @@ class registerController extends Controller
       if(isset($data['name'])){
             return view("exp.create",$data);
       }else{
-            return redirect('home');
+            return redirect('home')
+            ->withErrors("個人情報が未登録です。\n　先に登録を済ませてください。")
+            ->withInput();
       }
 
 

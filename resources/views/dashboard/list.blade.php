@@ -1,6 +1,13 @@
   @extends('layouts.base')
   @section('title','ホーム')
   @section('main')
+  @if (count($errors) > 0)
+      <ul>
+      @foreach($errors->all() as $err)
+        <li class ="text-danger">{{$err}} </li>
+      @endforeach
+      </ul>
+  @endif
   @csrf
     <div class="form-group row">
     <table class="table table-striped">

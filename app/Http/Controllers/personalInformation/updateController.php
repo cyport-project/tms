@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\staff;
 use App\constant_mst;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class updateController extends Controller
 {
@@ -54,7 +55,10 @@ class updateController extends Controller
               'employment_category'=>$req->employment_category,
               'delete_flag'=>'0'
             ]);
-
-     return redirect('personalInformation/list');
+    if(Auth::user()->mode==1){
+        return redirect('home');
+    }else{
+        return redirect('personalInformation/list');
+    }
    }
 }
