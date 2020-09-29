@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(constant_mstTableSeeder::class);
         $this->call(usersTableSeeder::class);
         $this->call(certification_mstTableSeeder::class);
+        $this->call(skill_mstTableSeeder::class);
     }
 }

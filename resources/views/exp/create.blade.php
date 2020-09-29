@@ -98,7 +98,7 @@
 
 <!-- 10行目 -->
     <div class="form-group row">
-        <label for="lang_tool" class="col-md-4 col-form-label text-md-right">工程</label>
+        <label for="lang_tool" class="col-md-4 col-form-label text-md-right">担当フェーズ</label>
         <div class="col-md-7">
 			       <input type="checkbox" name="rd_p" id="rd_p"　value="1">要件定義　
              <input type="checkbox" name="bd_p" id="bd_p"　value="1">基本設計　
@@ -114,7 +114,7 @@
     <div class="form-group row">
         <label for="lang_tool" class="col-md-4"></label>
         <div class="col-md-8　text-md-left">
-            <input type="button" class="btn btn-info" onclick="histroy.back()"" value="戻る">
+            <input type="button" class="btn btn-info" onclick="history.back()" value="戻る">
 			      <input type="submit" class="btn btn-info" value="確定">
         </div>
     </div>

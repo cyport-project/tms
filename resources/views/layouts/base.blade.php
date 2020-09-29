@@ -52,6 +52,7 @@
             <a class="dropdown-item" href="/personalInformation/register">個人情報登録</a>
             <a class="dropdown-item" href="/certification/list">資格情報表示</a>
             <a class="dropdown-item" href="/exp/list">経歴情報表示</a>
+            <a class="dropdown-item" href="/skill/create">スキルシート</a>
 
             @if(Auth::user()->mode == 2 || Auth::user()->mode==9)
               <a class="dropdown-item" href="/personalInformation/list">個人情報一覧</a>

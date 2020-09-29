@@ -14,7 +14,7 @@ class CreateConstantMstTable extends Migration
     public function up()
     {
         Schema::create('constant_mst', function (Blueprint $table) {
-            $table->string('constant_id',5)->unique();
+            $table->string('constant_id',5);
             $table->string('name',20);
             $table->string('notice',40);
             $table->integer('display_order');

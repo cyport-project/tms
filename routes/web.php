@@ -59,3 +59,9 @@ Route:: prefix('exp')-> group(function() {
   Route::patch('update','exp\updateController@register' );
   Route::post('register','exp\registerController@register' );
 });
+
+// スキル情報
+Route:: prefix('skill')-> group(function() {
+  Route::get('create','skill\registerController@create' );
+  Route::post('register','skill\registerController@register' );
+});

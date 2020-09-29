@@ -37,9 +37,9 @@
       <tr>
         <td> {{$record->start_period}}～{{$record->end_period}}</td>
         <td> <span class="vertical" >{{$record->industry}}</span> </td>
-        <td> {{$record->content}} </td>
+        <td> {{$record->pro_content}} <br/> {{$record->content}}</td>
         <td> {{$record->mod_os}} </td>
-        <td> {{$record->DB_DC}} </td>
+        <td> {{$record->db_dc}} </td>
         <td> {{$record->lang_tool}} </td>
         <td> <span class="vertical" >@if($record->rd_p == '1') 〇 @endif　</span></td>
         <td> <span class="vertical" >@if($record->bd_p == '1') 〇 @endif  </span></td>
