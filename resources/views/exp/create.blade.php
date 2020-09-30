@@ -28,7 +28,7 @@
   <div class="form-group row">
     <label for="start_period" class="col-md-4 col-form-label text-md-right">プロジェクト開始</label>
     <div class="col-md-6">
-      <input type="date" name="start_period" value="old('start_period')">
+      <input type="date" name="start_period" value="{{old('start_period')}}">
     </div>
   </div>
 
@@ -36,7 +36,7 @@
   <div class="form-group row">
     <label for="end_period" class="col-md-4 col-form-label text-md-right">プロジェクト終了</label>
     <div class="col-md-6">
-      <input type="date" name="end_period" value="old('end_period')">
+      <input type="date" name="end_period" value="{{old('end_period')}}">
     </div>
   </div>
 
@@ -60,7 +60,7 @@
   <div class="form-group row">
  	    <label for="pro_content" class="col-md-4 col-form-label text-md-right">プロジェクト概要</label>
  	    <div class="col-md-6">
- 	      <textarea cols="50" name="pro_content" value="{{old('pro_content')}}"></textarea>
+ 	      <textarea cols="50"  rows="3" name="pro_content">{{old('pro_content')}}</textarea>
  	    </div>
   </div>
 
@@ -68,7 +68,7 @@
   <div class="form-group row">
    	 	<label for="content" class="col-md-4 col-form-label text-md-right">業務内容</label>
  	    <div class="col-md-6">
- 	      <textarea cols="50" name="content" value="{{old('content')}}"></textarea>
+ 	      <textarea cols="50" rows="3" name="content" >{{old('content')}}</textarea>
  	    </div>
   </div>
 

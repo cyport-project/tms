@@ -10,7 +10,6 @@ class dashboardController extends Controller
 {
   public function __construct()
   {
-      \Log::info('dashboard Start');
       $this->middleware('auth');
   }
     //お知らせを読み込む

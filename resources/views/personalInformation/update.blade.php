@@ -74,7 +74,7 @@
         <label for="educational_h" class="col-md-4 col-form-label text-md-right">学歴</label>
             <select name="educational">
                 @foreach ($educationals as $educational)
-                  <option value = {{$educational->value}} @if($educational->value === $b->educational) selected @endif> {{$educational->name}} </option>
+                  <option value = {{$educational->value}} @if($educational->value == $b->educational) selected @endif> {{$educational->name}} </option>
                 @endforeach
             </select>
         </div>
@@ -103,7 +103,7 @@
         <label for="department_h" class="col-md-4 col-form-label text-md-right">部署</label>
             <select name="department">
                 @foreach ($departments as $department)
-                    <option value = {{$department->value}} @if($department->value === $b->department) selected @endif> {{$department->name}} </option>
+                    <option value = {{$department->value}} @if($department->value == $b->department) selected @endif> {{$department->name}} </option>
                 @endforeach
             </select>
       </div>
@@ -117,7 +117,7 @@
         <label for="employment_category_h" class="col-md-4 col-form-label text-md-right">就業区分</label>
               <select name="employment_category">
                 @foreach ($employment_categorys as $employment_category)
-                  <option value = {{$employment_category->value}} @if($employment_category->value === $b->employment_category) selected @endif> {{$employment_category->name}} </option>
+                  <option value = {{$employment_category->value}} @if($employment_category->value == $b->employment_category) selected @endif> {{$employment_category->name}} </option>
                 @endforeach
               </select>
       </div>

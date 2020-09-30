@@ -10,6 +10,11 @@ use App\staff;
 
 class registerController extends Controller
 {
+    //認証チェック
+    public function __construct()
+    {
+      $this->middleware('auth');
+    }
     //入力画面表示
     public function create(){
       $data['name']=staff::where('s_id', Auth::user()->s_id) -> first();

@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\DB;
 
 class listController extends Controller
 {
+  //認証チェック
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
   public function list(){
     //経験情報を読み込む
     $data['name']=staff::where('s_id', Auth::user()->s_id) -> first();

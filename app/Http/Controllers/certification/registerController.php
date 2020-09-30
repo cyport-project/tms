@@ -36,8 +36,6 @@ class registerController extends Controller
               ->withErrors("個人情報が未登録です。\n　先に登録を済ませてください。")
               ->withInput();
         }
-
-
     }
 
     //データベースへの登録

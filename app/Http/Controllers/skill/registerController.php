@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Auth;
 
 class registerController extends Controller
 {
+  //認証チェック
+  public function __construct(){
+    $this->middleware('auth');
+  }
   public function create(){
     //定数の取得
     $data["_1"] =skill_mst::where('skill_id','<','0200' )
@@ -89,6 +93,6 @@ class registerController extends Controller
         $skill_detail->save();
       }
     }
-    return redirect('skill\create');
+    return redirect('home');
   }
 }

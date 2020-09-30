@@ -12,7 +12,7 @@
     <label> 得意分野・得意技術 </label>
   </div>
   <div class="col-12">
-    <textarea style="width:100%;" name="speciality" value="{{old('speciality')}}"></textarea>
+    <textarea style="width:100%;" rows="3" name="speciality">{{old('speciality')}}</textarea>
   </div>
 </div>
 
